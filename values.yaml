@@ -1,0 +1,83 @@
+namespace: default
+applicationName: restinthemiddle
+
+image:
+  repository: docker.io/jdschulze/restinthemiddle
+  pullPolicy: IfNotPresent
+  tag: ""
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+config:
+  targetHostDsn: https://example.com:4443
+  listenIp: 0.0.0.0
+  listenPort: "8000"
+  headers:
+    User-Agent: Rest in the middle logging proxy
+  loggingEnabled: true
+  exclude: ""
+
+serviceAccount:
+  create: false
+  annotations: {}
+  name: ""
+
+podAnnotations: {}
+
+podSecurityContext: {}
+#  fsGroup: 2000
+
+securityContext:
+  capabilities:
+    drop:
+    - ALL
+  readOnlyRootFilesystem: true
+  runAsNonRoot: true
+  runAsUser: 1000
+  runAsGroup: 1000
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+#    kubernetes.io/ingress.class: nginx
+#    kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: restinthemiddle.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+#    - secretName: chart-example-tls
+#      hosts:
+#        - chart-example.local
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 64Mi
+  requests:
+    cpu: 100m
+    memory: 64Mi
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+#  targetMemoryUtilizationPercentage: 80
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+# Probably you should leave this untouched
+replicaCount: 1
