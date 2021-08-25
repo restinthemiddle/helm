@@ -2,15 +2,15 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: restinthemiddle-config
-  namespace: {{ .Release.namespace }}
+  namespace: {{ .Values.namespace }}
 data:
   config.yaml: |+
     targetHostDsn: {{ .Values.config.targetHostDsn }}
     listenIp: {{ .Values.config.listenIp }}
-    listenPort: {{ .Values.config.listenPort }}
+    listenPort: {{ .Values.config.listenPort | quote }}
     headers:
       {{- range $name, $value := .Values.config.headers }}
       {{ $name }}: {{ $value }}
       {{- end }}
     loggingEnabled: {{ .Values.config.loggingEnabled }}
-    exclude: {{ .Values.config.exclude }}
+    exclude: {{ .Values.config.exclude | quote }}

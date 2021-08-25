@@ -7,9 +7,9 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.service.port }}
-      targetPort: {{ .Values.config.listenPort }}
+    - name: listen-port
+      port: {{ .Values.service.portOverride | default .Values.config.listenPort }}
+      targetPort: listen-port
       protocol: TCP
-      name: listen-port
   selector:
     {{- include "restinthemiddle.selectorLabels" . | nindent 4 }}

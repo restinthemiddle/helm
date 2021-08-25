@@ -13,12 +13,12 @@ fullnameOverride: ""
 
 config:
   targetHostDsn: https://example.com:4443
-  listenIp: 0.0.0.0
-  listenPort: "8000"
+  listenIp: 0.0.0.0    # Usually you shouldn’t change this value
+  listenPort: "8000"   # Non-privileged ports only! Use service.portOverride if you want to use a privileged port.
   headers:
     User-Agent: Rest in the middle logging proxy
-  loggingEnabled: true
-  exclude: ""
+  loggingEnabled: true # You know, for Logging
+  exclude: ""          # URL RegEx
 
 serviceAccount:
   create: false
@@ -41,7 +41,7 @@ securityContext:
 
 service:
   type: ClusterIP
-  port: 80
+  portOverride: "" # Use this only if you have to override config.listenPort because you want to use a privileged port.
 
 ingress:
   enabled: false
