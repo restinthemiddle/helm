@@ -18,7 +18,8 @@ config:
   headers:
     User-Agent: Rest in the middle logging proxy
   loggingEnabled: true # You know, for Logging
-  exclude: ""          # URL RegEx
+  setRequestId: false  # Add an X-Request-Id header if not already present
+  exclude: ""          # Exclude requests that match this URL RegEx
 
 serviceAccount:
   create: false

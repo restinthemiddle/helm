@@ -13,4 +13,5 @@ data:
       {{ $name }}: {{ $value }}
       {{- end }}
     loggingEnabled: {{ .Values.config.loggingEnabled }}
+    setRequestId: {{ .Values.config.setRequestId }}
     exclude: {{ .Values.config.exclude | quote }}
