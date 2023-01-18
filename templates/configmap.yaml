@@ -1,17 +1,10 @@
+{{- if .Values.config -}}
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: restinthemiddle-config
   namespace: {{ .Release.Namespace }}
 data:
-  config.yaml: |+
-    targetHostDsn: {{ .Values.config.targetHostDsn }}
-    listenIp: {{ .Values.config.listenIp }}
-    listenPort: {{ .Values.config.listenPort | quote }}
-    headers:
-      {{- range $name, $value := .Values.config.headers }}
-      {{ $name }}: {{ $value }}
-      {{- end }}
-    loggingEnabled: {{ .Values.config.loggingEnabled }}
-    setRequestId: {{ .Values.config.setRequestId }}
-    exclude: {{ .Values.config.exclude | quote }}
+  config.yaml: |
+    {{- toYaml .Values.config | nindent 4 }}
+{{- end }}

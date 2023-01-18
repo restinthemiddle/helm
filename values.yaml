@@ -2,9 +2,10 @@ namespace: default
 applicationName: restinthemiddle
 
 image:
-  repository: docker.io/jdschulze/restinthemiddle
+  registry: docker.io
+  repository: jdschulze/restinthemiddle
   pullPolicy: IfNotPresent
-  tag: ""
+  tag: "2.0.0-alpha.11"
 
 imagePullSecrets: []
 
@@ -12,14 +13,17 @@ nameOverride: ""
 fullnameOverride: ""
 
 config:
-  targetHostDsn: https://example.com:4443
-  listenIp: 0.0.0.0    # Usually you shouldn’t change this value
-  listenPort: "8000"   # Non-privileged ports only! Use service.portOverride if you want to use a privileged port.
-  headers:
-    User-Agent: Rest in the middle logging proxy
-  loggingEnabled: true # You know, for Logging
-  setRequestId: false  # Add an X-Request-Id header if not already present
-  exclude: ""          # Exclude requests that match this URL RegEx
+  exclude: ""             # Exclude requests that match this URL RegEx
+  excludePostBody: ""     # Do not log the Request body if the URL path matches this RegEx
+  excludeResponseBody: "" # Do not log the Response body if the URL path matches this RegEx
+  headers: {}
+  listenIp: 0.0.0.0       # Usually you shouldn’t change this value
+  listenPort: "8000"      # Non-privileged ports only! Use service.portOverride if you want to use a privileged port.
+  logPostBody: true       # Log the Request body
+  logResponseBody: true   # Log the Response body (if it is not chunked)
+  loggingEnabled: true    # You know, for Logging
+  setRequestId: false     # Add an X-Request-Id header if not already present
+  targetHostDsn: https://username:password@example.com:4443/example/path
 
 serviceAccount:
   create: false
@@ -42,36 +46,37 @@ securityContext:
 
 service:
   type: ClusterIP
-  portOverride: "" # Use this only if you have to override config.listenPort because you want to use a privileged port.
+  # -- Use this only if you have to override config.listenPort because you want to use a privileged port.
+  portOverride: ""
 
 ingress:
   enabled: false
   className: ""
   annotations: {}
-#    kubernetes.io/ingress.class: nginx
-#    kubernetes.io/tls-acme: "true"
   hosts:
     - host: restinthemiddle.local
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls: []
-#    - secretName: chart-example-tls
+#    - secretName: restinthemiddle-tls
 #      hosts:
-#        - chart-example.local
+#        - restinthemiddle.local
 
+# -- Adjust those values to your needs. These values are only suggestions!
 resources:
   limits:
     cpu: 100m
     memory: 64Mi
   requests:
-    cpu: 100m
-    memory: 64Mi
+    cpu: 10m
+    memory: 32Mi
 
 autoscaling:
+  # -- Handle with care! Autoscaling will make sense only if you have centralized logging.
   enabled: false
   minReplicas: 1
-  maxReplicas: 100
+  maxReplicas: 2
   targetCPUUtilizationPercentage: 80
 #  targetMemoryUtilizationPercentage: 80
 
@@ -81,5 +86,5 @@ tolerations: []
 
 affinity: {}
 
-# Probably you should leave this untouched
+# -- Leave this at 1 if you do not have centralized logging.
 replicaCount: 1
