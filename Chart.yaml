@@ -1,5 +1,0 @@
-apiVersion: v2
-name: restinthemiddle
-description: HTTP logging proxy
-type: application
-version: 0.3.1
