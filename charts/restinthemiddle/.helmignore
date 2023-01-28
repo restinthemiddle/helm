@@ -24,3 +24,7 @@
 
 # Helm packages
 restinthemiddle-*
+
+
+.gitignore
+README.md

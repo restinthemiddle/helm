@@ -5,7 +5,8 @@ image:
   registry: docker.io
   repository: jdschulze/restinthemiddle
   pullPolicy: IfNotPresent
-  tag: "2.0.0-alpha.12"
+  # -- Restinthemiddle container image tag
+  tag: "2.0.0-alpha.14"
 
 imagePullSecrets: []
 
@@ -13,16 +14,26 @@ nameOverride: ""
 fullnameOverride: ""
 
 config:
-  exclude: ""             # Exclude requests that match this URL RegEx
-  excludePostBody: ""     # Do not log the Request body if the URL path matches this RegEx
-  excludeResponseBody: "" # Do not log the Response body if the URL path matches this RegEx
+  # -- Exclude requests that match this URL RegEx
+  exclude: ""
+  # -- Do not log the Request body if the URL path matches this RegEx
+  excludePostBody: ""
+  # -- Do not log the Response body if the URL path matches this RegEx
+  excludeResponseBody: "" 
   headers: {}
-  listenIp: 0.0.0.0       # Usually you shouldn’t change this value
-  listenPort: "8000"      # Non-privileged ports only! Use service.portOverride if you want to use a privileged port.
-  logPostBody: true       # Log the Request body
-  logResponseBody: true   # Log the Response body (if it is not chunked)
-  loggingEnabled: true    # You know, for Logging
-  setRequestId: false     # Add an X-Request-Id header if not already present
+  # -- Usually you shouldn’t change this value
+  listenIp: 0.0.0.0       
+  # -- Non-privileged ports only! Use service.portOverride if you want to use a privileged port.
+  listenPort: "8000"      
+  # -- Log the Request body
+  logPostBody: true       
+  # -- Log the Response body (if it is not chunked)
+  logResponseBody: true   
+  # -- You know, for Logging
+  loggingEnabled: true    
+  # -- Add an X-Request-Id header if not already present
+  setRequestId: false     
+  # -- The target's URL
   targetHostDsn: https://username:password@example.com:4443/example/path
 
 serviceAccount:
