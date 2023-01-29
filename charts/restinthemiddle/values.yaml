@@ -21,7 +21,7 @@ config:
   # -- Do not log the Response body if the URL path matches this RegEx
   excludeResponseBody: "" 
   headers: {}
-  # -- Usually you shouldn’t change this value
+  # -- Usually you should not change this value
   listenIp: 0.0.0.0       
   # -- Non-privileged ports only! Use service.portOverride if you want to use a privileged port.
   listenPort: "8000"      

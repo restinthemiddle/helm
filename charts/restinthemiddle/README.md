@@ -14,17 +14,17 @@ Deploy the HTTP logging proxy with ease
 | autoscaling.maxReplicas | int | `2` |  |
 | autoscaling.minReplicas | int | `1` |  |
 | autoscaling.targetCPUUtilizationPercentage | int | `80` |  |
-| config.exclude | string | `""` |  |
-| config.excludePostBody | string | `""` |  |
-| config.excludeResponseBody | string | `""` |  |
+| config.exclude | string | `""` | Exclude requests that match this URL RegEx |
+| config.excludePostBody | string | `""` | Do not log the Request body if the URL path matches this RegEx |
+| config.excludeResponseBody | string | `""` | Do not log the Response body if the URL path matches this RegEx |
 | config.headers | object | `{}` |  |
-| config.listenIp | string | `"0.0.0.0"` |  |
-| config.listenPort | string | `"8000"` |  |
-| config.logPostBody | bool | `true` |  |
-| config.logResponseBody | bool | `true` |  |
-| config.loggingEnabled | bool | `true` |  |
-| config.setRequestId | bool | `false` |  |
-| config.targetHostDsn | string | `"https://username:password@example.com:4443/example/path"` |  |
+| config.listenIp | string | `"0.0.0.0"` | Usually you should not change this value |
+| config.listenPort | string | `"8000"` | Non-privileged ports only! Use service.portOverride if you want to use a privileged port. |
+| config.logPostBody | bool | `true` | Log the Request body |
+| config.logResponseBody | bool | `true` | Log the Response body (if it is not chunked) |
+| config.loggingEnabled | bool | `true` | You know, for Logging |
+| config.setRequestId | bool | `false` | Add an X-Request-Id header if not already present |
+| config.targetHostDsn | string | `"https://username:password@example.com:4443/example/path"` | The target's URL |
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.registry | string | `"docker.io"` |  |
