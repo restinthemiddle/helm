@@ -2,6 +2,15 @@ apiVersion: v1
 entries:
   restinthemiddle:
   - apiVersion: v2
+    created: "2023-05-04T08:36:24.074128001Z"
+    description: Deploy the HTTP logging proxy with ease
+    digest: 898dc0e884ee89fcc96468379b43f17131474b44452540cf82bec6e1d6e72353
+    name: restinthemiddle
+    type: application
+    urls:
+    - https://github.com/restinthemiddle/helm/releases/download/restinthemiddle-0.7.0/restinthemiddle-0.7.0.tgz
+    version: 0.7.0
+  - apiVersion: v2
     created: "2023-01-28T23:57:00.920400167Z"
     description: Deploy the HTTP logging proxy with ease
     digest: 05c023262d85cdb4d003002910d713fa4a43690295f4eaf9791f0ee1634abb6a
@@ -19,4 +28,4 @@ entries:
     urls:
     - https://github.com/restinthemiddle/helm/releases/download/restinthemiddle-0.5.0/restinthemiddle-0.5.0.tgz
     version: 0.5.0
-generated: "2023-01-28T23:57:00.920406867Z"
+generated: "2023-05-04T08:36:24.074144201Z"
