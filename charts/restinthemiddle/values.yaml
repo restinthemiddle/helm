@@ -6,7 +6,7 @@ image:
   repository: jdschulze/restinthemiddle
   pullPolicy: IfNotPresent
   # -- Restinthemiddle container image tag
-  tag: "2.0.0-alpha.14"
+  tag: "2.0.0-alpha.15"
 
 imagePullSecrets: []
 
@@ -45,10 +45,13 @@ podAnnotations: {}
 
 podLabels: {}
 
-podSecurityContext: {}
-#  fsGroup: 2000
+podSecurityContext:
+  fsGroup: 1000
+  runAsUser: 1000
+  runAsGroup: 1000
 
 securityContext:
+  allowPrivilegeEscalation: false
   capabilities:
     drop:
       - ALL
