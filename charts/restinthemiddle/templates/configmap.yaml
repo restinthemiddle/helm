@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ include "restinthemiddle.fullname" . }}-config
+  name: {{ include "restinthemiddle.fullname" . }}
   namespace: {{ .Release.Namespace }}
 data:
   config.yaml: |

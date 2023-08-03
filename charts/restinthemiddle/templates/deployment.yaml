@@ -51,7 +51,7 @@ spec:
       volumes:
         - name: config-volume
           configMap:
-            name: restinthemiddle-config
+            name: {{ include "restinthemiddle.fullname" . }}
 
       {{- with .Values.nodeSelector }}
       nodeSelector:
