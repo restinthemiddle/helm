@@ -7,7 +7,8 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - name: listen-port
+    - appProtocol: http
+      name: listen-port
       port: {{ .Values.service.portOverride | default .Values.config.listenPort }}
       targetPort: listen-port
       protocol: TCP
