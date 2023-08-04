@@ -2,6 +2,16 @@
 ## [Unreleased]
 
 
+<a name="restinthemiddle-0.9.1"></a>
+## [restinthemiddle-0.9.1] - 2023-08-04
+### Docs
+- add a changelog
+- add badges to README.md
+
+### Fix
+- unignore README.md
+
+
 <a name="restinthemiddle-0.9.0"></a>
 ## [restinthemiddle-0.9.0] - 2023-08-03
 ### Feat
@@ -98,7 +108,8 @@
 <a name="0.1.0"></a>
 ## 0.1.0 - 2021-07-28
 
-[Unreleased]: https://github.com/restinthemiddle/helm/compare/restinthemiddle-0.9.0...HEAD
+[Unreleased]: https://github.com/restinthemiddle/helm/compare/restinthemiddle-0.9.1...HEAD
+[restinthemiddle-0.9.1]: https://github.com/restinthemiddle/helm/compare/restinthemiddle-0.9.0...restinthemiddle-0.9.1
 [restinthemiddle-0.9.0]: https://github.com/restinthemiddle/helm/compare/restinthemiddle-0.8.0...restinthemiddle-0.9.0
 [restinthemiddle-0.8.0]: https://github.com/restinthemiddle/helm/compare/restinthemiddle-0.7.2...restinthemiddle-0.8.0
 [restinthemiddle-0.7.2]: https://github.com/restinthemiddle/helm/compare/restinthemiddle-0.7.1...restinthemiddle-0.7.2
