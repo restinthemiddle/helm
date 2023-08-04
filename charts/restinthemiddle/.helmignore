@@ -22,9 +22,5 @@
 *.tmproj
 .vscode/
 
-# Helm packages
-restinthemiddle-*
-
-
 .gitignore
-README.md
+restinthemiddle-*
