@@ -2,12 +2,14 @@
 ## [Unreleased]
 
 
+<a name="restinthemiddle-0.10.0"></a>
+## [restinthemiddle-0.10.0] - 2023-08-04
+### Feat
+- add appProtocol field to Service
+
+
 <a name="restinthemiddle-0.9.1"></a>
 ## [restinthemiddle-0.9.1] - 2023-08-04
-### Docs
-- add a changelog
-- add badges to README.md
-
 ### Fix
 - unignore README.md
 
@@ -38,18 +40,12 @@
 
 <a name="restinthemiddle-0.7.0"></a>
 ## [restinthemiddle-0.7.0] - 2023-05-04
-### Docs
-- regenerate README.md for 0.6.0
-
 ### Feat
 - add podLabels
 
 
 <a name="restinthemiddle-0.6.0"></a>
 ## [restinthemiddle-0.6.0] - 2023-01-29
-### Docs
-- add a README.md at root level
-
 ### Feat
 - publish chart version 0.6.0
 
@@ -62,12 +58,6 @@
 
 <a name="restinthemiddle-0.4.0"></a>
 ## [restinthemiddle-0.4.0] - 2023-01-18
-### Ci
-- add Chart Releaser action
-
-### Docs
-- fix chart version
-
 
 <a name="0.3.1"></a>
 ## [0.3.1] - 2023-01-18
@@ -83,9 +73,6 @@
 
 <a name="0.2.0"></a>
 ## [0.2.0] - 2021-09-26
-### Chore
-- use restinthemiddle 1.3.0
-
 
 <a name="0.1.3"></a>
 ## [0.1.3] - 2021-08-25
@@ -108,7 +95,8 @@
 <a name="0.1.0"></a>
 ## 0.1.0 - 2021-07-28
 
-[Unreleased]: https://github.com/restinthemiddle/helm/compare/restinthemiddle-0.9.1...HEAD
+[Unreleased]: https://github.com/restinthemiddle/helm/compare/restinthemiddle-0.10.0...HEAD
+[restinthemiddle-0.10.0]: https://github.com/restinthemiddle/helm/compare/restinthemiddle-0.9.1...restinthemiddle-0.10.0
 [restinthemiddle-0.9.1]: https://github.com/restinthemiddle/helm/compare/restinthemiddle-0.9.0...restinthemiddle-0.9.1
 [restinthemiddle-0.9.0]: https://github.com/restinthemiddle/helm/compare/restinthemiddle-0.8.0...restinthemiddle-0.9.0
 [restinthemiddle-0.8.0]: https://github.com/restinthemiddle/helm/compare/restinthemiddle-0.7.2...restinthemiddle-0.8.0
