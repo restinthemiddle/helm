@@ -6,7 +6,7 @@ image:
   repository: jdschulze/restinthemiddle
   pullPolicy: IfNotPresent
   # -- Restinthemiddle container image tag
-  tag: "2.0.0-alpha.18"
+  tag: "2.2.0"
 
 imagePullSecrets: []
 
@@ -19,22 +19,30 @@ config:
   # -- Do not log the Request body if the URL path matches this RegEx
   excludePostBody: ""
   # -- Do not log the Response body if the URL path matches this RegEx
-  excludeResponseBody: "" 
+  excludeResponseBody: ""
   headers: {}
   # -- Usually you should not change this value
-  listenIp: 0.0.0.0       
+  listenIp: 0.0.0.0
   # -- Non-privileged ports only! Use service.portOverride if you want to use a privileged port.
-  listenPort: "8000"      
+  listenPort: "8000"
   # -- Log the Request body
-  logPostBody: true       
+  logPostBody: true
   # -- Log the Response body (if it is not chunked)
-  logResponseBody: true   
+  logResponseBody: true
   # -- You know, for Logging
-  loggingEnabled: true    
+  loggingEnabled: true
   # -- Add an X-Request-Id header if not already present
-  setRequestId: false     
-  # -- The target's URL
-  targetHostDsn: https://username:password@example.com:4443/example/path
+  setRequestId: false
+  # -- The target's URL (mandatory). Example: https://username:password@example.com:4443/example/path
+  targetHostDsn: ""
+  # -- Please refer to the net/http.Server documentation and check the recommendations in the restinthemiddle README
+  readTimeout: 0
+  # -- Please refer to the net/http.Server documentation and check the recommendations in the restinthemiddle README
+  readHeaderTimeout: 0
+  # -- Please refer to the net/http.Server documentation and check the recommendations in the restinthemiddle README
+  writeTimeout: 0
+  # -- Please refer to the net/http.Server documentation and check the recommendations in the restinthemiddle README
+  idleTimeout: 0
 
 serviceAccount:
   create: false
