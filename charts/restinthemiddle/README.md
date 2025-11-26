@@ -1,6 +1,6 @@
 # restinthemiddle
 
-![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
+![Version: 1.1.0](https://img.shields.io/badge/Version-1.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square)
 
 Deploy the HTTP logging proxy with ease
 
@@ -33,7 +33,7 @@ Deploy the HTTP logging proxy with ease
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.registry | string | `"docker.io"` |  |
 | image.repository | string | `"jdschulze/restinthemiddle"` |  |
-| image.tag | string | `"2.2.0"` | Restinthemiddle container image tag |
+| image.tag | string | `"v2.2.2"` | Restinthemiddle container image tag |
 | imagePullSecrets | list | `[]` |  |
 | ingress.annotations | object | `{}` |  |
 | ingress.className | string | `""` |  |
