@@ -6,7 +6,7 @@ image:
   repository: jdschulze/restinthemiddle
   pullPolicy: IfNotPresent
   # -- Restinthemiddle container image tag
-  tag: "v2.2.2"
+  tag: "v2.3.0"
 
 imagePullSecrets: []
 
