@@ -1,3 +1,32 @@
+## 1.0.0 (2026-01-19)
+
+### ⚠ BREAKING CHANGES
+
+* use stable v2 tag
+
+### Features
+
+* add appProtocol field to Service ([4cefea2](https://github.com/restinthemiddle/helm/commit/4cefea21f0d2c5f3741480b8783b536b835cad85))
+* add podLabels ([d9f5ca9](https://github.com/restinthemiddle/helm/commit/d9f5ca9d441215166520cc57bc293588a97ab598))
+* bump chart version ([3f1a396](https://github.com/restinthemiddle/helm/commit/3f1a3967342dc37cc862775ecc11853309ca1cd9))
+* increase application version ([5d8f352](https://github.com/restinthemiddle/helm/commit/5d8f3521f81b649a8bfd41373c13ba77ccb8df0a))
+* publish chart version 0.6.0 ([63c50a7](https://github.com/restinthemiddle/helm/commit/63c50a731bc023b93de9add0013287223016805f))
+* release v1.1.0 ([c1056a5](https://github.com/restinthemiddle/helm/commit/c1056a5aaf71becc1eaf023986a87a504fef1fde))
+* start a new pod if ConfigMap changes ([f817c7d](https://github.com/restinthemiddle/helm/commit/f817c7d41aa43a765fe5530a63ac36472ac3580e))
+* upgrade version and increase security ([303ac29](https://github.com/restinthemiddle/helm/commit/303ac29007a74fa0358609e0498cbd3be3dfeb55))
+* use restinthemiddle v2 ([139f083](https://github.com/restinthemiddle/helm/commit/139f0832a4731aede57c29fbb2f3b0f67b6774d7))
+* use restinthemiddle v2 ([38881a4](https://github.com/restinthemiddle/helm/commit/38881a447d4e5db446d17f7e135ed45e56480993))
+
+### Bug Fixes
+
+* **cm:** rename ConfigMap again and rename reference in Deployment accordingly ([cc3e940](https://github.com/restinthemiddle/helm/commit/cc3e940df83b02a9ad98f966605e5188aac39c54))
+* **cm:** use fullname template for ConfigMap name ([9e2268d](https://github.com/restinthemiddle/helm/commit/9e2268df629daaa44c97c3ab54f2e5619f878b17))
+* improve port handling ([961c3f7](https://github.com/restinthemiddle/helm/commit/961c3f79c18c5fad3f2bcbf2e4c18c30f021c978))
+* unify namespace source ([26b5f18](https://github.com/restinthemiddle/helm/commit/26b5f18dad7bb3127630a9450eee47cb0b6fc03f))
+* unify namespace source (Release) ([677dee0](https://github.com/restinthemiddle/helm/commit/677dee002143ab5e71d7f51b7b9a465851628161))
+* unignore README.md ([f6b7522](https://github.com/restinthemiddle/helm/commit/f6b7522be09aea9974542a42b760cc20a627c16a))
+* wrong restinthemiddle version ([92b1292](https://github.com/restinthemiddle/helm/commit/92b12928e99bc1c90201c955e4245cc2e8b2c2e4))
+
 <a name="unreleased"></a>
 ## [Unreleased]
 
