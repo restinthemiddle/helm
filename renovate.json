@@ -3,6 +3,7 @@
   "extends": [
     "config:recommended"
   ],
+  "platformAutomerge": true,
   "customManagers": [
     {
       "customType": "regex",
@@ -24,7 +25,8 @@
         "pin",
         "digest"
       ],
-      "automerge": true
+      "automerge": true,
+      "automergeType": "pr"
     }
   ]
 }
