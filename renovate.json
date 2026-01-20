@@ -7,13 +7,24 @@
     {
       "customType": "regex",
       "fileMatch": [
-        "/^\\.github\\/workflows\\/.*\\.ya?ml$/"
+        "^\\.github/workflows/.+\\.ya?ml$"
       ],
       "matchStrings": [
-        "norwoodj/helm-docs/releases/download/v(?<currentValue>.*?)/helm-docs_(?<currentValue>.*?)_"
+        "helm-docs/releases/download/v(?<currentValue>[^/]+)/helm-docs_[^_]+_"
       ],
       "datasourceTemplate": "github-releases",
       "depNameTemplate": "norwoodj/helm-docs"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "automerge": true
     }
   ]
 }
