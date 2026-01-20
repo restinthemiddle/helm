@@ -1,7 +1,7 @@
 # restinthemiddle Helm chart repository
 
 [![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/restinthemiddle)](https://artifacthub.io/packages/search?repo=restinthemiddle)
-![GitHub tag (with filter)](https://img.shields.io/github/v/tag/restinthemiddle/helm)
+![GitHub Release](https://img.shields.io/github/v/release/restinthemiddle/helm)
 
 ## Add Helm repository
 
