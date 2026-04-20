@@ -1,3 +1,5 @@
+## [1.1.2](https://github.com/restinthemiddle/helm/compare/restinthemiddle-1.1.1...restinthemiddle-1.1.2) (2026-04-20)
+
 ## [1.1.1](https://github.com/restinthemiddle/helm/compare/restinthemiddle-1.1.0...restinthemiddle-1.1.1) (2026-01-19)
 
 <a name="unreleased"></a>
