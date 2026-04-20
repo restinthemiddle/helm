@@ -1,3 +1,9 @@
+## [1.1.4](https://github.com/restinthemiddle/helm/compare/v1.1.3...v1.1.4) (2026-04-20)
+
+### Bug Fixes
+
+* **ci:** decouple semantic-release and chart-releaser tag formats ([a4a85e6](https://github.com/restinthemiddle/helm/commit/a4a85e611a9612f060fc0d635239094cf1416cc3))
+
 ## [1.1.3](https://github.com/restinthemiddle/helm/compare/restinthemiddle-1.1.2...restinthemiddle-1.1.3) (2026-04-20)
 
 ## [1.1.2](https://github.com/restinthemiddle/helm/compare/restinthemiddle-1.1.1...restinthemiddle-1.1.2) (2026-04-20)
