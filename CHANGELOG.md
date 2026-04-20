@@ -1,3 +1,9 @@
+## [1.1.5](https://github.com/restinthemiddle/helm/compare/v1.1.4...v1.1.5) (2026-04-20)
+
+### Bug Fixes
+
+* **ci:** add workflow_dispatch trigger to release workflow ([9094f22](https://github.com/restinthemiddle/helm/commit/9094f22ea1bff11712e3683d04d726ca0781a0a3))
+
 ## [1.1.4](https://github.com/restinthemiddle/helm/compare/v1.1.3...v1.1.4) (2026-04-20)
 
 ### Bug Fixes
