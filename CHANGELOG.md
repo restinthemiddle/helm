@@ -1,3 +1,5 @@
+## [1.1.6](https://github.com/restinthemiddle/helm/compare/v1.1.5...v1.1.6) (2026-04-28)
+
 ## [1.1.5](https://github.com/restinthemiddle/helm/compare/v1.1.4...v1.1.5) (2026-04-20)
 
 ### Bug Fixes
