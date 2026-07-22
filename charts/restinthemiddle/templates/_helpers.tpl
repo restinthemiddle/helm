@@ -51,12 +51,14 @@ app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
 {{/*
-Create the name of the service account to use
+Create the name of the service account to use.
+Empty when no service account is created and none is named, so the
+pod falls back to the namespace default implicitly.
 */}}
 {{- define "restinthemiddle.serviceAccountName" -}}
 {{- if .Values.serviceAccount.create }}
 {{- default (include "restinthemiddle.fullname" .) .Values.serviceAccount.name }}
 {{- else }}
-{{- default "default" .Values.serviceAccount.name }}
+{{- .Values.serviceAccount.name }}
 {{- end }}
 {{- end }}

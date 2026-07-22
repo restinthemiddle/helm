@@ -1,7 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: {{ .Release.Namespace }}
   name: {{ include "restinthemiddle.fullname" . }}
   labels:
     {{- include "restinthemiddle.labels" . | nindent 4 }}
@@ -29,21 +28,21 @@ spec:
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "restinthemiddle.serviceAccountName" . }}
+      {{- with include "restinthemiddle.serviceAccountName" . }}
+      serviceAccountName: {{ . }}
+      {{- end }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
         - name: {{ template "restinthemiddle.name" . }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.image.registry }}/{{ .Values.image.repository }}:{{ .Values.image.tag | default .Values.image.tag }}"
+          image: "{{ .Values.image.registry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - containerPort: {{ .Values.config.listenPort }}
               protocol: TCP
               name: listen-port
-#          livenessProbe: {}
-#          readinessProbe: {}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:

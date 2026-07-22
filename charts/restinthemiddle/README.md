@@ -4,12 +4,15 @@
 
 Deploy the HTTP logging proxy with ease
 
+## Requirements
+
+Kubernetes: `>=1.23.0-0`
+
 ## Values
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | affinity | object | `{}` |  |
-| applicationName | string | `"restinthemiddle"` |  |
 | autoscaling.enabled | bool | `false` | Handle with care! Autoscaling will make sense only if you have centralized logging. |
 | autoscaling.maxReplicas | int | `2` |  |
 | autoscaling.minReplicas | int | `1` |  |
@@ -43,7 +46,6 @@ Deploy the HTTP logging proxy with ease
 | ingress.hosts[0].paths[0].pathType | string | `"ImplementationSpecific"` |  |
 | ingress.tls | list | `[]` |  |
 | nameOverride | string | `""` |  |
-| namespace | string | `"default"` |  |
 | nodeSelector | object | `{}` |  |
 | podAnnotations | object | `{}` |  |
 | podLabels | object | `{}` |  |
