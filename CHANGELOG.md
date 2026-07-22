@@ -1,3 +1,5 @@
+## [2.0.0](https://github.com/restinthemiddle/helm/compare/v1.1.10...v2.0.0) (2026-07-22)
+
 ## [1.1.10](https://github.com/restinthemiddle/helm/compare/v1.1.9...v1.1.10) (2026-07-16)
 
 ## [1.1.9](https://github.com/restinthemiddle/helm/compare/v1.1.8...v1.1.9) (2026-07-12)
