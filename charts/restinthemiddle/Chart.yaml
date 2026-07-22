@@ -2,6 +2,6 @@ apiVersion: v2
 name: restinthemiddle
 description: Deploy the HTTP logging proxy with ease
 type: application
-version: 2.0.0
+version: 2.0.1
 # autoscaling/v2 requires Kubernetes >= 1.23
 kubeVersion: ">=1.23.0-0"
