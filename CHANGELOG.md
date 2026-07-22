@@ -1,14 +1,42 @@
 ## [2.0.0](https://github.com/restinthemiddle/helm/compare/v1.1.10...v2.0.0) (2026-07-22)
 
+### ⚠ BREAKING CHANGES
+
+* the chart now requires Kubernetes >= 1.23 (autoscaling/v2, networking.k8s.io/v1); helm template pipelines no longer emit explicit metadata.namespace on Deployment and ConfigMap.
+
+### Features
+
+* modernize chart and drop pre-1.23 Kubernetes support ([3a23a7e](https://github.com/restinthemiddle/helm/commit/3a23a7e9f1ff79d4a763b87ebf3367fefaa0dbc0))
+
 ## [1.1.10](https://github.com/restinthemiddle/helm/compare/v1.1.9...v1.1.10) (2026-07-16)
+
+### Dependencies
+
+* **deps:** update actions/checkout action to v7 ([e2e3191](https://github.com/restinthemiddle/helm/commit/e2e3191bac73f6df4b62dcc4a28f0dd46950ca4f))
 
 ## [1.1.9](https://github.com/restinthemiddle/helm/compare/v1.1.8...v1.1.9) (2026-07-12)
 
+### Dependencies
+
+* **deps:** update docker.io/jdschulze/restinthemiddle docker tag to v2.3.10 ([b6acc01](https://github.com/restinthemiddle/helm/commit/b6acc01bc5bb81a195c3002c4fb10036865403fe))
+
 ## [1.1.8](https://github.com/restinthemiddle/helm/compare/v1.1.7...v1.1.8) (2026-06-12)
+
+### Dependencies
+
+* **deps:** update docker.io/jdschulze/restinthemiddle docker tag to v2.3.9 ([d6831bf](https://github.com/restinthemiddle/helm/commit/d6831bf81ae28e2f11cb6621f784fa4b7ff46536))
 
 ## [1.1.7](https://github.com/restinthemiddle/helm/compare/v1.1.6...v1.1.7) (2026-06-07)
 
+### Dependencies
+
+* **deps:** update docker.io/jdschulze/restinthemiddle docker tag to v2.3.8 ([f57acd1](https://github.com/restinthemiddle/helm/commit/f57acd13c523bca78cecc5f16a112a6443eddf1c))
+
 ## [1.1.6](https://github.com/restinthemiddle/helm/compare/v1.1.5...v1.1.6) (2026-04-28)
+
+### Dependencies
+
+* **deps:** update docker.io/jdschulze/restinthemiddle docker tag to v2.3.7 ([01b041a](https://github.com/restinthemiddle/helm/commit/01b041a3203ab1b95be6155e1e1bb885e03ebb79))
 
 ## [1.1.5](https://github.com/restinthemiddle/helm/compare/v1.1.4...v1.1.5) (2026-04-20)
 
