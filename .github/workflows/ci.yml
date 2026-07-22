@@ -1,0 +1,41 @@
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  render:
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: 'false'
+
+      - name: Install Helm
+        uses: azure/setup-helm@v5
+
+      - name: Lint chart
+        run: helm lint charts/restinthemiddle --set config.targetHostDsn=http://example.com
+
+      - name: Render chart with value combinations
+        run: |
+          set -euo pipefail
+          BASE="--set config.targetHostDsn=http://example.com"
+          render() {
+            echo "=== helm template $* ==="
+            # shellcheck disable=SC2086
+            helm template ci charts/restinthemiddle $BASE "$@" > /dev/null
+          }
+          render
+          render --set ingress.enabled=true
+          render --set ingress.enabled=true --set ingress.className=nginx
+          render --set autoscaling.enabled=true
+          render --set service.type=NodePort
+          render --set service.type=LoadBalancer
+          render --set serviceAccount.create=true
+          render --set service.portOverride=80
+          render --set ingress.enabled=true --set autoscaling.enabled=true --set serviceAccount.create=true
