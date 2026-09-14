@@ -3,7 +3,7 @@ image:
   repository: jdschulze/restinthemiddle
   pullPolicy: IfNotPresent
   # -- Restinthemiddle container image tag
-  tag: "v2.3.12"
+  tag: "v2.3.13"
 
 imagePullSecrets: []
 
