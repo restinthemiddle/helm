@@ -1,3 +1,14 @@
+## [2.0.3](https://github.com/restinthemiddle/helm/compare/v2.0.2...v2.0.3) (2026-09-14)
+
+### Bug Fixes
+
+* **ci:** pin conventional-changelog-conventionalcommits to v8 ([2ad65a3](https://github.com/restinthemiddle/helm/commit/2ad65a361babf1ce18d1f34d9973c66fc4d3b6c1))
+
+### Dependencies
+
+* **deps:** update docker.io/jdschulze/restinthemiddle docker tag to v2.3.12 ([faa9ea6](https://github.com/restinthemiddle/helm/commit/faa9ea695e04ea49cd12cc212464163a6f3c893e))
+* **deps:** update docker.io/jdschulze/restinthemiddle docker tag to v2.3.13 ([a25646e](https://github.com/restinthemiddle/helm/commit/a25646eb6c53e542a9d0597e6f4f30f2f97b9e43))
+
 ## [2.0.2](https://github.com/restinthemiddle/helm/compare/v2.0.1...v2.0.2) (2026-07-30)
 
 ## [2.0.1](https://github.com/restinthemiddle/helm/compare/v2.0.0...v2.0.1) (2026-07-22)
