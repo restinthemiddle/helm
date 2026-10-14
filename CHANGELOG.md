@@ -1,3 +1,9 @@
+## [2.0.6](https://github.com/restinthemiddle/helm/compare/v2.0.5...v2.0.6) (2026-10-14)
+
+### Dependencies
+
+* **deps:** update docker.io/jdschulze/restinthemiddle docker tag to v2.3.15 ([f57b790](https://github.com/restinthemiddle/helm/commit/f57b790aabf6e5492b930a4c1d673d0d8134a70b))
+
 ## [2.0.5](https://github.com/restinthemiddle/helm/compare/v2.0.4...v2.0.5) (2026-10-14)
 
 ### Bug Fixes
