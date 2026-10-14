@@ -2,10 +2,14 @@ on:
   push:
     branches:
       - main
+  pull_request:
   workflow_dispatch:
 
 jobs:
   release:
+    # On pull requests, semantic-release runs as a dry-run so pipeline breakage shows up before merge.
+    # Fork PRs get no write token, so they are skipped.
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
     permissions:
       contents: write
       issues: write
@@ -15,6 +19,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
         with:
+          ref: ${{ github.head_ref }}
           fetch-depth: 0
           persist-credentials: 'false'
 
@@ -36,8 +41,11 @@ jobs:
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v8.1.0
         env:
-          GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
+          GITHUB_TOKEN: ${{ github.event_name == 'pull_request' && github.token || secrets.SEMANTIC_RELEASE_TOKEN }}
         with:
+          dry_run: ${{ github.event_name == 'pull_request' }}
+          unset_gha_env: ${{ github.event_name == 'pull_request' }}
+          branches: ${{ github.event_name == 'pull_request' && github.head_ref || '' }}
           extra_plugins: |
             @semantic-release/git
             @semantic-release/exec
@@ -45,6 +53,7 @@ jobs:
             conventional-changelog-conventionalcommits@8
 
       - name: Run chart-releaser
+        if: github.event_name != 'pull_request'
         uses: helm/chart-releaser-action@v1.7.0
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
