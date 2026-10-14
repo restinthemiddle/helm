@@ -1,3 +1,13 @@
+## [2.0.5](https://github.com/restinthemiddle/helm/compare/v2.0.4...v2.0.5) (2026-10-14)
+
+### Bug Fixes
+
+* **ci:** pin conventional-changelog-conventionalcommits to v8 again ([77f8daf](https://github.com/restinthemiddle/helm/commit/77f8daff8209136003c9d324982a7a6fe1724818))
+
+### Dependencies
+
+* **deps:** update cycjimmy/semantic-release-action action to v8 ([ebc60e7](https://github.com/restinthemiddle/helm/commit/ebc60e7b6a3b0813d74401534a275b41b8024c50))
+
 ## [2.0.4](https://github.com/restinthemiddle/helm/compare/v2.0.3...v2.0.4) (2026-10-12)
 
 ### Dependencies
