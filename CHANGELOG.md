@@ -1,3 +1,9 @@
+## [2.0.7](https://github.com/restinthemiddle/helm/compare/v2.0.6...v2.0.7) (2026-10-16)
+
+### Dependencies
+
+* **deps:** update cycjimmy/semantic-release-action action to v8.1.2 ([842e4cf](https://github.com/restinthemiddle/helm/commit/842e4cf0526cdb6256c3244da173716776bd10a6))
+
 ## [2.0.6](https://github.com/restinthemiddle/helm/compare/v2.0.5...v2.0.6) (2026-10-14)
 
 ### Dependencies
