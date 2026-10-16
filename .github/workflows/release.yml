@@ -39,7 +39,7 @@ jobs:
           sudo mv helm-docs /usr/local/bin/
 
       - name: Semantic Release
-        uses: cycjimmy/semantic-release-action@v8.1.0
+        uses: cycjimmy/semantic-release-action@v8.1.2
         env:
           GITHUB_TOKEN: ${{ github.event_name == 'pull_request' && github.token || secrets.SEMANTIC_RELEASE_TOKEN }}
         with:
