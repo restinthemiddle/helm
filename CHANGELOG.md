@@ -1,3 +1,9 @@
+## [2.0.9](https://github.com/restinthemiddle/helm/compare/v2.0.8...v2.0.9) (2026-10-27)
+
+### Dependencies
+
+* **deps:** update helm/chart-releaser-action action to v1.8.0 ([023cc13](https://github.com/restinthemiddle/helm/commit/023cc13cdcc71ed5c2d330d4f39a5052f9fb33aa))
+
 ## [2.0.8](https://github.com/restinthemiddle/helm/compare/v2.0.7...v2.0.8) (2026-10-19)
 
 ### Dependencies
